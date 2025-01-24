@@ -10,7 +10,9 @@ const port = process.env.PORT || 3000;
 
 // Enable CORS
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://sharetodo-ui.onrender.com/', // Frontend's origin
+ origin: ['https://sharetodo-ui.onrender.com'], // Add your frontend's Render URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Add allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Frontend's origin
 }));
 
 // Middleware to parse JSON request bodies
