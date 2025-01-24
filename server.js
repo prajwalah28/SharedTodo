@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 
 // Enable CORS
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173', // Frontend's origin
+  origin: process.env.FRONTEND_URL || 'https://sharetodo-ui.onrender.com', // Frontend's origin
 }));
 
 // Middleware to parse JSON request bodies
